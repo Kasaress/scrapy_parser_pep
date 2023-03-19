@@ -1,7 +1,7 @@
 import scrapy
 
 from pep_parse.items import PepParseItem
-from pep_parse.settings import PEP_DOMAIN, PEP_URL
+from pep_parse.settings import PEP_DOMAIN
 
 
 class PepSpider(scrapy.Spider):
@@ -9,7 +9,7 @@ class PepSpider(scrapy.Spider):
 
     name = "pep"
     allowed_domains = [PEP_DOMAIN]
-    start_urls = [PEP_URL]
+    start_urls = [f"https://{domain}/" for domain in allowed_domains]
 
     def parse(self, response):
         """Находит ссылки на странице PEP, для каждой

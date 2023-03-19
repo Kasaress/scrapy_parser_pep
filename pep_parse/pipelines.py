@@ -3,7 +3,7 @@ from collections import defaultdict
 from csv import unix_dialect
 from datetime import datetime as dt
 
-from pep_parse.settings import BASE_DIR, DT_FORMAT, RESULTS_DIR
+from pep_parse.settings import BASE_DIR, DT_FORMAT, RESULTS
 
 
 class PepParsePipeline:
@@ -11,6 +11,12 @@ class PepParsePipeline:
     После завершения парсинга сохраняет агрегированную
     информацию в файл.
     """
+    def __init__(self):
+        """Создании папки для хранения результатов
+           при инициализации экземпляра класса.
+        """
+        self.results_dir = BASE_DIR / RESULTS
+        self.results_dir.mkdir(exist_ok=True)
 
     def open_spider(self, spider):
         """После старта парсера создает словарь для хранения данных."""
@@ -25,19 +31,16 @@ class PepParsePipeline:
         """После завершения парсинга сохраняет агрегированную
         информацию в файл.
         """
-        results_dir = BASE_DIR / RESULTS_DIR
-        results_dir.mkdir(exist_ok=True)
+        date_now = dt.now().strftime(DT_FORMAT)
         with open(
-            f"{results_dir}/status_summary_{dt.now().strftime(DT_FORMAT)}.csv",
+            f"{self.results_dir}/status_summary_{date_now}.csv",
             mode="w",
             encoding="utf-8",
         ) as file:
             csv.writer(
-                file, dialect=unix_dialect
-            ).writerows(
-                [
-                    ("Статус", "Количество"),
-                    *self.statuses.items(),
-                    ("Всего", sum(self.statuses.values())),
-                ]
-            )
+                file, dialect=unix_dialect, quoting=csv.QUOTE_NONE
+            ).writerows([
+                ("Статус", "Количество"),
+                *self.statuses.items(),
+                ("Всего", sum(self.statuses.values())),
+            ])

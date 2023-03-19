@@ -1,0 +1,68 @@
+number,name,status
+1,PEP Purpose and Guidelines,Active
+220,"Coroutines, Generators, Continuations",Rejected
+234,Iterators,Final
+230,Warning Framework,Final
+228,Reworking Python’s Numeric Model,Withdrawn
+229,Using Distutils to Build Python,Final
+232,Function Attributes,Final
+233,Python Online Help,Deferred
+231,__findattr__(),Rejected
+224,Attribute Docstrings,Rejected
+225,Elementwise/Objectwise Operators,Rejected
+226,Python 2.1 Release Schedule,Final
+221,Import As,Final
+222,Web Library Enhancements,Deferred
+223,Change the Meaning of ,Final
+227,Statically Nested Scopes,Final
+8104,2023 Term Steering Council election,Active
+8103,2022 Term Steering Council election,Final
+8101,2020 Term Steering Council election,Final
+8102,2021 Term Steering Council election,Final
+8016,The Steering Council Model,Accepted
+8100,January 2019 Steering Council election,Final
+8015,Organization of the Python community,Rejected
+8013,The External Council Governance Model,Rejected
+8014,The Commons Governance Model,Rejected
+8012,The Community Governance Model,Rejected
+8011,Python Governance Model Lead by Trio of Pythonistas,Rejected
+8010,The Technical Leader Governance Model,Rejected
+8002,Open Source Governance Survey,Final
+8001,Python Governance Voting Process,Final
+3333,Python Web Server Gateway Interface v1.0.1,Final
+8000,Python Language Governance Proposal Overview,Final
+3156,Asynchronous IO Support Rebooted: the “asyncio” Module,Final
+3155,Qualified name for classes and functions,Final
+3154,Pickle protocol version 4,Final
+3153,Asynchronous IO support,Superseded
+3149,ABI version tagged .so files,Final
+3151,Reworking the OS and IO exception hierarchy,Final
+3152,Cofunctions,Rejected
+3150,Statement local namespaces (aka “given” clause),Deferred
+3145,Asynchronous I/O For subprocess.Popen,Withdrawn
+3147,PYC Repository Directories,Final
+3146,Merging Unladen Swallow into CPython,Withdrawn
+3148,futures - execute computations asynchronously,Final
+3143,Standard daemon process library,Deferred
+3144,IP Address Manipulation Library for the Python Standard Library,Final
+3142,Add a “while” clause to generator expressions,Rejected
+3141,A Type Hierarchy for Numbers,Final
+3140,"str(container) should call str(item), not repr(item)",Rejected
+3139,Cleaning out sys and the “interpreter” module,Rejected
+3138,String representation in Python 3000,Final
+3137,Immutable Bytes and Mutable Buffer,Final
+3136,Labeled break and continue,Rejected
+3132,Extended Iterable Unpacking,Final
+3135,New Super,Final
+3134,Exception Chaining and Embedded Tracebacks,Final
+3131,Supporting Non-ASCII Identifiers,Final
+3133,Introducing Roles,Rejected
+3130,Access to Current Module/Class/Function,Rejected
+3129,Class Decorators,Final
+3127,Integer Literal Support and Syntax,Final
+3126,Remove Implicit String Concatenation,Rejected
+3128,BList: A Faster List-like Type,Rejected
+3125,Remove Backslash Continuation,Rejected
+3124,"Overloading, Generic Functions, Interfaces, and Adaptation",Deferred
+3123,Making PyObject_HEAD conform to standard C,Final
+3122,Delineation of the main module,Rejected

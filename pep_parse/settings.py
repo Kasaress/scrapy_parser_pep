@@ -1,24 +1,24 @@
 from pathlib import Path
 
-# dirs
-BASE_DIR = Path(__file__).parent.parent
-RESULTS_DIR = "results"
-
 # urls
-PEP_URL = "https://peps.python.org/"
 PEP_DOMAIN = "peps.python.org"
 
 # other constants
 DT_FORMAT = "%Y-%m-%d_%H-%M-%S"
 
+# dirs
+BASE_DIR = Path(__file__).parent.parent
+RESULTS = "results"
+RESULTS_DIR = BASE_DIR / RESULTS
+
 # scrapy settins
 BOT_NAME = "pep_parse"
-SPIDER_MODULES = ["pep_parse.spiders"]
 NEWSPIDER_MODULE = "pep_parse.spiders"
+SPIDER_MODULES = [NEWSPIDER_MODULE]
 ROBOTSTXT_OBEY = True
 FEED_EXPORT_ENCODING = "utf-8"
 FEEDS = {
-    "results/pep_%(time)s.csv": {
+    f"{RESULTS}/pep_%(time)s.csv": {
         "format": "csv",
         "fields": ["number", "name", "status"],
         "overwrite": True,
